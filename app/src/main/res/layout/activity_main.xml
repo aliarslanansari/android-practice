@@ -5,10 +5,86 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-    <Button
+
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Say Hello"
-        android:layout_centerInParent="true"
-        android:id="@+id/btnHello"/>
+        android:id="@+id/moviesRelativeLayout"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The Matrix"
+            android:id="@+id/checkboxMatrix"
+            android:layout_toRightOf="@id/checkboxHarry"
+            android:checked="true"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Harry Potter"
+            android:id="@+id/checkboxHarry"
+            android:layout_marginLeft="15dp"
+            android:checked="true"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Joker"
+            android:layout_toRightOf="@id/checkboxMatrix"
+            android:id="@+id/checkboxJoker"
+            android:layout_marginLeft="15dp"
+            android:checked="true"/>
+    </RelativeLayout>
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/moviesRelativeLayout"
+        android:id="@+id/radioButtonGroup"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:text="Married">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton2"
+            android:text="Looking"
+            android:checked="true"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton1"
+            android:text="Married"
+            android:checked="true"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton3"
+            android:text="Single"
+            android:checked="true"
+            />
+
+
+    </RadioGroup>
+
+
+<ProgressBar
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:id="@+id/progressBar"
+    android:max="100"
+    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+    android:visibility="visible"/>
+
+
 </RelativeLayout>
