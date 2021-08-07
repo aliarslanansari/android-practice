@@ -6,10 +6,18 @@
     android:layout_height="match_parent"
     android:orientation="horizontal">
 
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/ic_launcher_background"
-        android:id="@+id/myImage"
-        android:layout_centerInParent="true"/>
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:id="@+id/studentSpinner"/>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_below="@id/studentSpinner"
+        android:id="@+id/listItem"/>
+
 </RelativeLayout>
